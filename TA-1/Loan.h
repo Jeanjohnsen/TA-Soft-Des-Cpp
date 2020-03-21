@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <iostream>
 
+
 class Loan
 {
 public:
@@ -41,29 +42,19 @@ public:
     //repayment of eacht payment to stream object ost
     void outputPeriodicalPayments(std::ostream& ost)const;
 
+    double getQuarterlyInterest()const;
 
 
+    double getMonthlyInterest()const;
 
 
-private:
-
-double _debt, _interestRate;
-int mYears, mPaymentsPerYear;
-
-};
-
-class Person {
-public:
-    Person();
-
-    std::string name() const;
-    void setName(const std::string &name);
-
+    double getBalance()const;
+    void setBalance(double balance);
 
 private:
-   std :: string  mName;
 
-
+    double _debt, _interestRate, mBalance;
+    int mYears, mPaymentsPerYear;
 
 };
 
